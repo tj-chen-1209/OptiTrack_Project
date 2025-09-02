@@ -1,3 +1,0 @@
-[console_scripts]
-opti_track_node = optitrack_ros2.opti_track_node:main
-
