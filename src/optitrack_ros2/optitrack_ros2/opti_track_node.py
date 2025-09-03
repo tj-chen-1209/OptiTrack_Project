@@ -1,5 +1,4 @@
 # TODO： 实现一个ROS2节点，订阅OptiTrack数据并发布到一个话题
-
 import types
 import time
 import sys
