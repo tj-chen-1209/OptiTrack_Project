@@ -20,9 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'opti_track_node = optitrack_ros2.opti_track_node:main',
             'optitrack_streamer = optitrack_ros2.optitrack_streamer:main',
-            'streamer_test = optitrack_ros2.streamer_test:main',
         ],
     },
 )
