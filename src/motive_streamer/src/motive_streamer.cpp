@@ -16,12 +16,12 @@ MotiveStreamer::MotiveStreamer()
 
     declare_parameter("motive_topic_name", "motive_rigid_body_list");
     declare_parameter("pose_pub_topic", "pose_pub");
-    declare_parameter("rigid_name","");
+    declare_parameter("rigid_name", "");
     declare_parameter("local_address", "");
     declare_parameter("motive_address", "");
-    declare_parameter("namespace","");
+    declare_parameter("namespace", "");
 
-    pubRigidPose = this->create_publisher<geometry_msgs::msg::PoseStamped>("/"+get_parameter("namespace").as_string()+"/"+get_parameter("pose_pub_topic").as_string(),10);
+    pubRigidPose = this->create_publisher<geometry_msgs::msg::PoseStamped>("/" + get_parameter("namespace").as_string() + "/" + get_parameter("pose_pub_topic").as_string(), 10);
     strDefaultLocal = get_parameter("local_address").as_string();
     strDefaultMotive = get_parameter("motive_address").as_string();
     rigid_name = get_parameter("rigid_name").as_string();
@@ -34,11 +34,13 @@ MotiveStreamer::MotiveStreamer()
     connectParams.serverDataPort = 1511;
     connectParams.multicastAddress = discoveredMulticastGroupAddr;
     int result = ConnectClient();
-    if (result != ErrorCode_OK) {
+    if (result != ErrorCode_OK)
+    {
         RCLCPP_ERROR(get_logger(), "Error initializing client. See log for details. Exiting.");
         return;
     }
-    else {
+    else
+    {
         RCLCPP_INFO(get_logger(), "Client initialized and ready.");
     }
 
@@ -52,42 +54,45 @@ MotiveStreamer::MotiveStreamer()
         rigid_id = assetNameToAssetID.at(rigid_name);
         RCLCPP_INFO(get_logger(), "rigid_name: %s, rigid_id: %d", rigid_name.c_str(), rigid_id);
     }
-    catch(const std::exception& e)
+    catch (const std::exception &e)
     {
         RCLCPP_ERROR(get_logger(), "No rigid body named %s", rigid_name.c_str());
         throw e;
     }
-    
+
     initOk = true;
 }
 MotiveStreamer::~MotiveStreamer()
 {
-    if (natnetClient) {
+    if (natnetClient)
+    {
         natnetClient->Disconnect();
         delete natnetClient;
         natnetClient = nullptr;
     }
-    if (dataDefs) {
+    if (dataDefs)
+    {
         NatNet_FreeDescriptions(dataDefs);
         dataDefs = nullptr;
     }
 }
 
-
 void NATNET_CALLCONV MotiveStreamer::DataHandler(sFrameOfMocapData *data, void *pUserData)
-{   
+{
     std::chrono::steady_clock::time_point timepoint1 = std::chrono::steady_clock::now();
-    MotiveStreamer* pStreamer = (MotiveStreamer*) pUserData;
-    NatNetClient* pClient = pStreamer->natnetClient;
+    MotiveStreamer *pStreamer = (MotiveStreamer *)pUserData;
+    NatNetClient *pClient = pStreamer->natnetClient;
     if (!pStreamer || !pClient)
         return;
 
     geometry_msgs::msg::PoseStamped poseStampedMsg;
     poseStampedMsg.header.stamp = rclcpp::Clock().now();
     poseStampedMsg.header.frame_id = "base_link";
-    for (int i = 0; i < data->nRigidBodies; i++) {
+    for (int i = 0; i < data->nRigidBodies; i++)
+    {
 
-        if(data->RigidBodies[i].ID == pStreamer->rigid_id){
+        if (data->RigidBodies[i].ID == pStreamer->rigid_id)
+        {
             poseStampedMsg.pose.position.x = data->RigidBodies[i].x;
             poseStampedMsg.pose.position.y = data->RigidBodies[i].y;
             poseStampedMsg.pose.position.z = data->RigidBodies[i].z;
@@ -130,7 +135,8 @@ int MotiveStreamer::ConnectClient()
 {
     natnetClient->Disconnect();
     int ret = natnetClient->Connect(connectParams);
-    if (ret != ErrorCode_OK) {
+    if (ret != ErrorCode_OK)
+    {
         RCLCPP_ERROR(get_logger(), "Unable to connect to server.  Error code: %d. Exiting.", ret);
         return ErrorCode_Internal;
     }
@@ -139,11 +145,13 @@ int MotiveStreamer::ConnectClient()
 
 bool MotiveStreamer::UpdateDataDescriptions()
 {
-    if (dataDefs) {
+    if (dataDefs)
+    {
         NatNet_FreeDescriptions(dataDefs);
     }
     int ret = natnetClient->GetDataDescriptionList(&dataDefs);
-    if (ret != ErrorCode_OK || !dataDefs) {
+    if (ret != ErrorCode_OK || !dataDefs)
+    {
         return false;
     }
     UpdateDataToDescriptionMaps(dataDefs);
@@ -158,67 +166,81 @@ void MotiveStreamer::UpdateDataToDescriptionMaps(sDataDescriptions *pDataDefs)
     std::string assetName = "";
     int index = 0;
     if (pDataDefs == nullptr || pDataDefs->nDataDescriptions <= 0)
-    return;
+        return;
 
-    for (int i = 0; i < pDataDefs->nDataDescriptions; i++) {
+    for (int i = 0; i < pDataDefs->nDataDescriptions; i++)
+    {
         assetID = -1;
         assetName = "";
-        switch (pDataDefs->arrDataDescriptions[i].type) {
-            case Descriptor_RigidBody: {
-                sRigidBodyDescription* pRB = pDataDefs->arrDataDescriptions[i].Data.RigidBodyDescription;
-                assetID = pRB->ID;
-                assetName = std::string(pRB->szName);
-                break;
-            }
-            case Descriptor_Skeleton: {
-                sSkeletonDescription* pSK = pDataDefs->arrDataDescriptions[i].Data.SkeletonDescription;
-                assetID = pSK->skeletonID;
-                assetName = std::string(pSK->szName);
-                break;
-            }
-            case Descriptor_MarkerSet: {
-                index++;
-                continue;
-            }
-            case Descriptor_ForcePlate: {
-                sForcePlateDescription* pDesc = pDataDefs->arrDataDescriptions[i].Data.ForcePlateDescription;
-                assetID = pDesc->ID;
-                assetName = pDesc->strSerialNo;
-                break;
-            }
-            case Descriptor_Device: {
-                sDeviceDescription* pDesc = pDataDefs->arrDataDescriptions[i].Data.DeviceDescription;
-                assetID = pDesc->ID;
-                assetName = std::string(pDesc->strName);
-                break;
-            }
-            case Descriptor_Camera: {
-                continue;
-            }
-            case Descriptor_Asset: {
-                sAssetDescription* pDesc = pDataDefs->arrDataDescriptions[i].Data.AssetDescription;
-                assetID = pDesc->AssetID;
-                assetName = std::string(pDesc->szName);
-                break;
-            }
+        switch (pDataDefs->arrDataDescriptions[i].type)
+        {
+        case Descriptor_RigidBody:
+        {
+            sRigidBodyDescription *pRB = pDataDefs->arrDataDescriptions[i].Data.RigidBodyDescription;
+            assetID = pRB->ID;
+            assetName = std::string(pRB->szName);
+            break;
         }
-        if (assetID == -1) {
+        case Descriptor_Skeleton:
+        {
+            sSkeletonDescription *pSK = pDataDefs->arrDataDescriptions[i].Data.SkeletonDescription;
+            assetID = pSK->skeletonID;
+            assetName = std::string(pSK->szName);
+            break;
+        }
+        case Descriptor_MarkerSet:
+        {
+            index++;
+            continue;
+        }
+        case Descriptor_ForcePlate:
+        {
+            sForcePlateDescription *pDesc = pDataDefs->arrDataDescriptions[i].Data.ForcePlateDescription;
+            assetID = pDesc->ID;
+            assetName = pDesc->strSerialNo;
+            break;
+        }
+        case Descriptor_Device:
+        {
+            sDeviceDescription *pDesc = pDataDefs->arrDataDescriptions[i].Data.DeviceDescription;
+            assetID = pDesc->ID;
+            assetName = std::string(pDesc->strName);
+            break;
+        }
+        case Descriptor_Camera:
+        {
+            continue;
+        }
+        case Descriptor_Asset:
+        {
+            sAssetDescription *pDesc = pDataDefs->arrDataDescriptions[i].Data.AssetDescription;
+            assetID = pDesc->AssetID;
+            assetName = std::string(pDesc->szName);
+            break;
+        }
+        }
+        if (assetID == -1)
+        {
             RCLCPP_WARN(get_logger(), "Unknown asset type.");
         }
-        else {
+        else
+        {
             std::pair<std::map<int, std::string>::iterator, bool> insertResult;
             insertResult = assetIDtoAssetName.insert(std::make_pair(assetID, assetName));
             // update
             assetNameToAssetID.insert(std::make_pair(assetName, assetID));
-            if (!insertResult.second) {
+            if (!insertResult.second)
+            {
                 RCLCPP_WARN(get_logger(), "Duplicate asset ID detected: %d", assetID);
             }
         }
 
-        if (assetID != -1) {
+        if (assetID != -1)
+        {
             std::pair<std::map<int, int>::iterator, bool> insertResult;
             insertResult = assetIDtoAssetDescOrder.insert(std::make_pair(assetID, index++));
-            if (!insertResult.second) {
+            if (!insertResult.second)
+            {
                 RCLCPP_WARN(get_logger(), "Duplicate asset ID detected: %d", assetID);
             }
         }
