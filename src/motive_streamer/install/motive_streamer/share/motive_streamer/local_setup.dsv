@@ -1,0 +1,4 @@
+source;share/motive_streamer/environment/ament_prefix_path.sh
+source;share/motive_streamer/environment/library_path.sh
+source;share/motive_streamer/environment/path.sh
+source;share/motive_streamer/environment/pythonpath.sh

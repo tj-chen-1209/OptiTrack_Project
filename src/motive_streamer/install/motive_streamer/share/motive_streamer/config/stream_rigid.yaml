@@ -1,0 +1,5 @@
+/motive_streamer:
+  ros__parameters:
+    motive_topic_name: "motive_rigid_body_list"
+    local_address: "192.168.50.110"
+    motive_address: "192.168.50.203"

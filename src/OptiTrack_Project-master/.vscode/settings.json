@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.mcap": "mcap",
+        "memory": "cpp"
+    }
+}
