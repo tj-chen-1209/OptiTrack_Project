@@ -1,0 +1,19 @@
+[01m[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Pose PandaArmController::calculate_absolute_pose(const Pose&)[m[K’:
+[01m[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:120:51:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KtoMsg(tf2::Quaternion&)[m[K’
+  120 |             absolute_pose.orientation = [01;31m[Ktf2::toMsg(absolute_q)[m[K;
+      |                                         [01;31m[K~~~~~~~~~~^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.hpp:43[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.hpp:42[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:35[m[K,
+                 from [01m[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:62[m[K,
+                 from [01m[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:4[m[K:
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class A, class B> B tf2::toMsg(const A&)[m[K’
+  129 | B [01;36m[KtoMsg[m[K(const A & a);
+      |   [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:120:51:[m[K [01;36m[Knote: [m[K  couldn’t deduce template parameter ‘[01m[KB[m[K’
+  120 |             absolute_pose.orientation = [01;36m[Ktf2::toMsg(absolute_q)[m[K;
+      |                                         [01;36m[K~~~~~~~~~~^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/test_node.dir/build.make:76: CMakeFiles/test_node.dir/src/moveit2_test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

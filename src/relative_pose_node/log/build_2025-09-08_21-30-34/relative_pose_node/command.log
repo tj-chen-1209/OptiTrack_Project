@@ -1,0 +1,2 @@
+Invoking command in '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node -- -j16 -l16
+Invoked command in '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node -- -j16 -l16

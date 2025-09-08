@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target test_node[0m
+[ 33%] Built target relative_pose_node
+[ 66%] Built target sub_node
+[ 83%] [32mBuilding CXX object CMakeFiles/test_node.dir/src/moveit2_test.cpp.o[0m

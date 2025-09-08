@@ -1,0 +1,30 @@
+[35m[1mConsolidate compiler generated dependencies of target relative_pose_node[0m
+[35m[1mConsolidate compiler generated dependencies of target test_node[0m
+[35m[1mConsolidate compiler generated dependencies of target sub_node[0m
+[ 33%] Built target relative_pose_node
+[ 50%] [32mBuilding CXX object CMakeFiles/test_node.dir/src/moveit2_test.cpp.o[0m
+[ 83%] Built target sub_node
+[100%] [32m[1mLinking CXX executable test_node[0m
+[100%] Built target test_node
+-- Install configuration: ""
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/relative_pose_node
+-- Installing: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/test_node
+-- Set runtime path of "/home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/test_node" to ""
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/sub_node
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/launch
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/launch/relative_pose_launch.py
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/ament_index/resource_index/package_run_dependencies/relative_pose_node
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/ament_index/resource_index/parent_prefix_path/relative_pose_node
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/ament_prefix_path.sh
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/path.sh
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/path.dsv
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.bash
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.sh
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.zsh
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.dsv
+-- Installing: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/package.dsv
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/ament_index/resource_index/packages/relative_pose_node
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/cmake/relative_pose_nodeConfig.cmake
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/cmake/relative_pose_nodeConfig-version.cmake
+-- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/package.xml

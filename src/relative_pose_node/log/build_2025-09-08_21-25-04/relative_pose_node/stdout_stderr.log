@@ -1,0 +1,13 @@
+[35m[1mConsolidate compiler generated dependencies of target test_node[0m
+[ 33%] Built target sub_node
+[ 66%] Built target relative_pose_node
+[ 83%] [32mBuilding CXX object CMakeFiles/test_node.dir/src/moveit2_test.cpp.o[0m
+[01m[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:[m[K In member function ‘[01m[Kvoid PandaArmController::planAndExecute()[m[K’:
+[01m[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:101:41:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kmoveit::core::MoveItErrorCode[m[K’ to ‘[01m[Kbool[m[K’ in initialization
+  101 |         bool success = [01;31m[Kmove_group_->plan(plan)[m[K;
+      |                        [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~[m[K
+      |                                         [01;31m[K|[m[K
+      |                                         [01;31m[Kmoveit::core::MoveItErrorCode[m[K
+gmake[2]: *** [CMakeFiles/test_node.dir/build.make:76: CMakeFiles/test_node.dir/src/moveit2_test.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

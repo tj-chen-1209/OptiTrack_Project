@@ -1,0 +1,34 @@
+[0.006s] Invoking command in '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node -- -j16 -l16
+[0.033s] [35m[1mConsolidate compiler generated dependencies of target relative_pose_node[0m
+[0.033s] [35m[1mConsolidate compiler generated dependencies of target test_node[0m
+[0.036s] [35m[1mConsolidate compiler generated dependencies of target sub_node[0m
+[0.042s] [ 33%] Built target relative_pose_node
+[0.051s] [ 50%] [32mBuilding CXX object CMakeFiles/test_node.dir/src/moveit2_test.cpp.o[0m
+[0.052s] [ 83%] Built target sub_node
+[3.800s] [100%] [32m[1mLinking CXX executable test_node[0m
+[4.331s] [100%] Built target test_node
+[4.339s] Invoked command in '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node -- -j16 -l16
+[4.346s] Invoking command in '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node
+[4.354s] -- Install configuration: ""
+[4.354s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/relative_pose_node
+[4.354s] -- Installing: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/test_node
+[4.354s] -- Set runtime path of "/home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/test_node" to ""
+[4.354s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/lib/relative_pose_node/sub_node
+[4.354s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/launch
+[4.354s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/launch/relative_pose_launch.py
+[4.354s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/ament_index/resource_index/package_run_dependencies/relative_pose_node
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/ament_index/resource_index/parent_prefix_path/relative_pose_node
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/ament_prefix_path.sh
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/ament_prefix_path.dsv
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/path.sh
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/environment/path.dsv
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.bash
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.sh
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.zsh
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/local_setup.dsv
+[4.355s] -- Installing: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/package.dsv
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/ament_index/resource_index/packages/relative_pose_node
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/cmake/relative_pose_nodeConfig.cmake
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/cmake/relative_pose_nodeConfig-version.cmake
+[4.355s] -- Up-to-date: /home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node/share/relative_pose_node/package.xml
+[4.356s] Invoked command in '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node

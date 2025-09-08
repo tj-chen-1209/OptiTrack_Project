@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.000444] (relative_pose_node) JobQueued: {'identifier': 'relative_pose_node', 'dependencies': OrderedDict()}
+[0.000572] (relative_pose_node) JobStarted: {'identifier': 'relative_pose_node'}
+[0.004793] (relative_pose_node) JobProgress: {'identifier': 'relative_pose_node', 'progress': 'cmake'}
+[0.005138] (relative_pose_node) JobProgress: {'identifier': 'relative_pose_node', 'progress': 'build'}
+[0.005601] (relative_pose_node) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node', '--', '-j16', '-l16'], 'cwd': '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('CONDA_PROMPT_MODIFIER', ''), ('LANGUAGE', 'en_US:en'), ('LC_TIME', 'zh_CN.UTF-8'), ('USER', 'tingjia'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/tingjia'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/tingjia/workspace'), ('LESS', '-R'), ('CONDA_SHLVL', '0'), ('DESKTOP_SESSION', 'ubuntu'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ZSH', '/home/tingjia/.oh-my-zsh'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('GTK_MODULES', 'gail:atk-bridge'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('PAGER', 'less'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1580'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('SYSTEMD_EXEC_PID', '1850'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/tingjia/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy'), ('P9K_TTY', 'old'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '40809'), ('_CE_M', ''), ('_CONDA_ROOT', '/home/tingjia/anaconda3'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('COLCON_PREFIX_PATH', '/home/tingjia/workspace/src/relative_pose_node/install'), ('LOGNAME', 'tingjia'), ('GTK_IM_MODULE', 'fcitx'), ('_', '/usr/bin/colcon'), ('JOURNAL_STREAM', '8:12159'), ('_P9K_SSH_TTY', '/dev/pts/3'), ('XDG_SESSION_CLASS', 'user'), ('ROS_VERSION', '2'), ('USER_ZDOTDIR', '/home/tingjia'), ('USERNAME', 'tingjia'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/tingjia/anaconda3/condabin:/home/tingjia/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/tingjia/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts:/home/tingjia/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('PAPERSIZE', 'a4'), ('SESSION_MANAGER', 'local/tingjia-System-Product-Name:@/tmp/.ICE-unix/1813,unix/tingjia-System-Product-Name:/tmp/.ICE-unix/1813'), ('INVOCATION_ID', '1cf5b09b875e42ec97443019be66b4b1'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('XDG_MENU_PREFIX', 'gnome-'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/tingjia/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f24d5fac846cd3fa.txt'), ('VSCODE_INJECTION', '1'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XMODIFIERS', '@im=fcitx'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-f25a7bc8cd.sock'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('CONDA_PYTHON_EXE', '/home/tingjia/anaconda3/bin/python'), ('AMENT_PREFIX_PATH', '/home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node:/opt/ros/humble'), ('LC_NAME', 'zh_CN.UTF-8'), ('SHELL', '/usr/bin/zsh'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('CONDA_DEFAULT_ENV', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('_CONDA_EXE', '/home/tingjia/anaconda3/bin/conda'), ('P9K_SSH', '0'), ('QT_IM_MODULE', 'fcitx'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('VSCODE_NONCE', '3ddf09e1-4cfd-4040-9572-5fa327c9ffb8'), ('PWD', '/home/tingjia/workspace/src/relative_pose_node/build/relative_pose_node'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/tingjia/anaconda3/bin/conda'), ('ZDOTDIR', '/home/tingjia'), ('_P9K_TTY', '/dev/pts/3'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_PAPER', 'zh_CN.UTF-8'), ('CONDA_PREFIX', ''), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/tingjia/workspace/src/relative_pose_node/install/relative_pose_node:/opt/ros/humble')]), 'shell': False}
+[0.038586] (relative_pose_node) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target test_node\x1b[0m\n'}
+[0.047117] (relative_pose_node) StdoutLine: {'line': b'[ 33%] Built target sub_node\n'}
+[0.047328] (relative_pose_node) StdoutLine: {'line': b'[ 66%] Built target relative_pose_node\n'}
+[0.051274] (relative_pose_node) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding CXX object CMakeFiles/test_node.dir/src/moveit2_test.cpp.o\x1b[0m\n'}
+[0.099817] (-) TimerEvent: {}
+[0.200088] (-) TimerEvent: {}
+[0.300371] (-) TimerEvent: {}
+[0.400631] (-) TimerEvent: {}
+[0.500922] (-) TimerEvent: {}
+[0.601267] (-) TimerEvent: {}
+[0.701588] (-) TimerEvent: {}
+[0.801860] (-) TimerEvent: {}
+[0.902127] (-) TimerEvent: {}
+[1.002384] (-) TimerEvent: {}
+[1.102650] (-) TimerEvent: {}
+[1.202928] (-) TimerEvent: {}
+[1.303201] (-) TimerEvent: {}
+[1.403483] (-) TimerEvent: {}
+[1.503735] (-) TimerEvent: {}
+[1.603989] (-) TimerEvent: {}
+[1.704276] (-) TimerEvent: {}
+[1.804544] (-) TimerEvent: {}
+[1.904835] (-) TimerEvent: {}
+[2.005112] (-) TimerEvent: {}
+[2.105400] (-) TimerEvent: {}
+[2.205672] (-) TimerEvent: {}
+[2.305953] (-) TimerEvent: {}
+[2.406233] (-) TimerEvent: {}
+[2.490958] (relative_pose_node) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg::Pose PandaArmController::calculate_absolute_pose(const Pose&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.491142] (relative_pose_node) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:120:51:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KtoMsg(tf2::Quaternion&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.491216] (relative_pose_node) StderrLine: {'line': b'  120 |             absolute_pose.orientation = \x1b[01;31m\x1b[Ktf2::toMsg(absolute_q)\x1b[m\x1b[K;\n'}
+[2.491283] (relative_pose_node) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.491344] (relative_pose_node) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer_interface.hpp:43\x1b[m\x1b[K,\n'}
+[2.491403] (relative_pose_node) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.hpp:42\x1b[m\x1b[K,\n'}
+[2.491478] (relative_pose_node) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/buffer.h:35\x1b[m\x1b[K,\n'}
+[2.491538] (relative_pose_node) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/moveit/move_group_interface/move_group_interface.h:62\x1b[m\x1b[K,\n'}
+[2.491600] (relative_pose_node) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:4\x1b[m\x1b[K:\n'}
+[2.491660] (relative_pose_node) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class A, class B> B tf2::toMsg(const A&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.491718] (relative_pose_node) StderrLine: {'line': b'  129 | B \x1b[01;36m\x1b[KtoMsg\x1b[m\x1b[K(const A & a);\n'}
+[2.491776] (relative_pose_node) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.491836] (relative_pose_node) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/tf2/tf2/convert.hpp:129:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[2.491897] (relative_pose_node) StderrLine: {'line': b'\x1b[01m\x1b[K/home/tingjia/workspace/src/relative_pose_node/src/moveit2_test.cpp:120:51:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  couldn\xe2\x80\x99t deduce template parameter \xe2\x80\x98\x1b[01m\x1b[KB\x1b[m\x1b[K\xe2\x80\x99\n'}
+[2.491959] (relative_pose_node) StderrLine: {'line': b'  120 |             absolute_pose.orientation = \x1b[01;36m\x1b[Ktf2::toMsg(absolute_q)\x1b[m\x1b[K;\n'}
+[2.492020] (relative_pose_node) StderrLine: {'line': b'      |                                         \x1b[01;36m\x1b[K~~~~~~~~~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.506345] (-) TimerEvent: {}
+[2.606596] (-) TimerEvent: {}
+[2.706883] (-) TimerEvent: {}
+[2.807165] (-) TimerEvent: {}
+[2.907457] (-) TimerEvent: {}
+[3.007768] (-) TimerEvent: {}
+[3.108095] (-) TimerEvent: {}
+[3.208419] (-) TimerEvent: {}
+[3.308643] (-) TimerEvent: {}
+[3.408870] (-) TimerEvent: {}
+[3.509092] (-) TimerEvent: {}
+[3.609301] (-) TimerEvent: {}
+[3.709497] (-) TimerEvent: {}
+[3.809696] (-) TimerEvent: {}
+[3.909970] (-) TimerEvent: {}
+[4.010201] (-) TimerEvent: {}
+[4.110423] (-) TimerEvent: {}
+[4.210639] (-) TimerEvent: {}
+[4.310850] (-) TimerEvent: {}
+[4.411098] (-) TimerEvent: {}
+[4.511322] (-) TimerEvent: {}
+[4.611526] (-) TimerEvent: {}
+[4.698100] (relative_pose_node) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/test_node.dir/build.make:76: CMakeFiles/test_node.dir/src/moveit2_test.cpp.o] Error 1\n'}
+[4.698252] (relative_pose_node) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/test_node.dir/all] Error 2\n'}
+[4.698392] (relative_pose_node) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[4.699785] (relative_pose_node) CommandEnded: {'returncode': 2}
+[4.705120] (relative_pose_node) JobEnded: {'identifier': 'relative_pose_node', 'rc': 2}
+[4.705500] (-) EventReactorShutdown: {}
